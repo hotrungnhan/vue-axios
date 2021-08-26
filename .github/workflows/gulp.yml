@@ -9,11 +9,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [12.x, 14.x, 16.x]
-    
     steps:
     - uses: actions/checkout@v2
 
@@ -25,7 +20,7 @@ jobs:
         registry-url: 'https://registry.npmjs.org'
     - name: Build & Publish
       run: |
-        yarn ci
+        yarn add
         yarn build
         npm publish --access public
       env:
