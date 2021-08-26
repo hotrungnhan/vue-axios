@@ -1,9 +1,9 @@
 {
   "name": "@hotrungnhan/vue-axios",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "author": "hotrungnhan <hotrungnhan29@mgmail.com> ",
-  "main": "./src/index.js",
+  "main": "./dist/vue-axios.min.esm.js",
   "types": "index.d.ts",
   "files": [
     "./dist",
@@ -25,7 +25,8 @@
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
-    "@hotrungnhan/vue-axios": "^1.0.0",
+    "@babel/preset-es2016": "^7.0.0-beta.53",
+    "@hotrungnhan/vue-axios": "1.0.1",
     "@lopatnov/rollup-plugin-uglify": "^2.1.1",
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
@@ -34,6 +35,7 @@
     "gulp-file": "^0.4.0",
     "gulp-filter": "^7.0.0",
     "gulp-plumber": "^1.2.1",
+    "gulp-rollup-2": "^1.3.1",
     "gulp-uglify": "^3.0.2",
     "merge-stream": "^2.0.0",
     "rollup": "^2.56.3",
