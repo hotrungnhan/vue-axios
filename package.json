@@ -1,12 +1,12 @@
 {
   "name": "@hotrungnhan/vue-axios",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "private": false,
   "author": "hotrungnhan <hotrungnhan29@mgmail.com> ",
-  "main": "./dist/vue-axios.esm.min.js",
+  "main": "dist/vue-axios.esm.min.js",
   "types": "index.d.ts",
   "files": [
-    "./dist",
+    "dist",
     "index.d.ts"
   ],
   "repository": {
