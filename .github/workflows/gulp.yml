@@ -1,26 +1,22 @@
 name: NodeJS with Gulp
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
+  release:
+    types: [created]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-      
+    - uses: actions/setup-node@v2
       with:
+        node-version: '12.x'
         registry-url: 'https://registry.npmjs.org'
-    - name: Build & Publish
+    - name: install 
       run: |
         yarn install 
-        yarn install
-        npm publish --access public
+        yarn build
+    - name: Publish 
+      run: npm publish --access public
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
