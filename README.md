@@ -2,6 +2,7 @@
 [![npm version](https://img.shields.io/npm/v/@hotrungnhan/vue-axios.svg?style=flat-square)](https://www.npmjs.org/package/@hotrungnhan/vue-axios)
 [![install size](https://packagephobia.com/badge?p=@hotrungnhan/vue-axios)](https://packagephobia.com/result?p=@hotrungnhan/vue-axios)
 [![License](https://img.shields.io/npm/l/@hotrungnhan/vue-axios.svg)](https://www.npmjs.com/package/@hotrungnhan/vue-axios)
+![CI Badge](https://github.com/hotrungnhan/vue-axios/actions/workflows/gulp.yml/badge.svg)
 
 Imspire from [imcvampire/vue-axios](https://www.npmjs.com/package/vue-axios) if you ever use him package , both is very similar
 but mine use esm, provide you smaller size, best clean build ever.
