@@ -6,7 +6,7 @@
 /* vue 3 and up*/
 export default {
   install: (app, axios) => {
-    if (app.version && app.version.split('.')[0] >= '3') {
+    if (app.version && app.version.split('.')[0] >= '3' && app.provide) {
       app.config.globalProperties.$axios = axios
       app.$axios = axios
       app.provide('$axios', axios)

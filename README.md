@@ -80,9 +80,9 @@ import {getCurrentInstance} from "vue"
 export default {
   name: 'App',
   setup() {
-      const axios=getCurrentInstance().appContext.app.$axios //IDE intellisense compatible
+      const axios=getCurrentInstance().appContext.app.$axios //intellisense compatible
       //or
-      const axios = getCurrentInstance().appContext.config.globalProperties.$axios; //IDE intellisense unsupported
+      const axios = getCurrentInstance().appContext.config.globalProperties.$axios; //intellisense compatible
       axios.get(api).then((response) => {
         console.log(response.data)
       })
@@ -92,6 +92,8 @@ export default {
 ``` 
 but for who using typescript  you can easily cast to StaticAxios to got intellisense back.
 ```ts 
- const axios= inject("$axios") as AxiosStatic
+ const axios= inject("$axios") as AxiosStatic 
+ //or 
+  const axios= inject<AxiosStatic>("$axios")
 ``` 
 Please kindly check full documention of [axios](https://github.com/axios/axios) too.
