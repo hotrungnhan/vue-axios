@@ -1,0 +1,51 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue-Axios in Vue 3 with Composition API</title>
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.1.5/dist/vue.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
+            <script src="../dist/vue-axios.common.min.js"></script>
+
+    <script type="module">
+      const { ref, inject, provide } = Vue
+      const app = Vue.createApp({
+        template: `
+          <button @click="reset">reset msg</button>
+          <button @click="getMsg1">get msg by injectAxios</button>
+          <div v-html="msg"></div>
+        `,
+        setup() {
+          let msg = ref('Hello, Composition API!')
+          const injectAxios = inject('$axios')
+          const getMsg1 = () => {
+            injectAxios
+              .get('http://localhost:8000/greet')
+              .then((res) => (msg.value = res.data))
+          }
+        
+          const reset = () => {
+            msg.value = 'Hello, Composition API!'
+          }
+
+          return { msg, getMsg1, reset }
+        },
+        methods: {
+          reset() {
+            this.msg = 'Hello, World!'
+          },
+        },
+      })
+      app.use(VueAxios, axios)
+      app.mount('#app')
+    </script>
+  </body>
+</html>
+
+1

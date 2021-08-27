@@ -1,33 +1,31 @@
 {
   "name": "@hotrungnhan/vue-axios",
-  "version": "1.0.1",
+  "version": "1.0.10",
   "private": false,
   "author": "hotrungnhan <hotrungnhan29@mgmail.com> ",
-  "main": "./src/index.js",
+  "main": "dist/vue-axios.esm.min.js",
   "types": "index.d.ts",
   "files": [
-    "./dist",
+    "dist",
     "index.d.ts"
   ],
-  "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "github.com/hotrungnhan/vue-axios"
+    "url": "https://github.com/hotrungnhan/vue-axios"
   },
   "scripts": {
     "build": "gulp",
+    "test": "node test/server.js",
     "pub": "yarn publish --access public"
   },
   "peerDependencies": {
-    "axios": ">=0.21.1",
+    "axios": ">=0.20.1",
     "vue": ">=2.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
-    "@hotrungnhan/vue-axios": "^1.0.0",
-    "@lopatnov/rollup-plugin-uglify": "^2.1.1",
-    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
@@ -37,12 +35,15 @@
     "gulp-uglify": "^3.0.2",
     "merge-stream": "^2.0.0",
     "rollup": "^2.56.3",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "terser": "^5.7.2",
     "typescript": "^4.3.5",
     "vue": "^3.0.0"
   },
-  "keywords": [],
+  "license": "MIT",
+  "keywords": [
+    "wrapper",
+    "axios",
+    "vue",
+    "composition"
+  ],
   "dependencies": {}
 }
